@@ -129,7 +129,7 @@ namespace ConsultorioOdontologico
             Console.WriteLine("| 5        | Incluir Atendimento        |"); // FEITO
             Console.WriteLine("| 6        | Incluir Especialidade      |"); // FEITO
             Console.WriteLine("| 7        | Incluir Procedimento       |"); // 
-            Console.WriteLine("| 8        | Alterar Dentista           |"); //
+            Console.WriteLine("| 8        | Alterar Dentista           |"); // 
             Console.WriteLine("| 9        | Alterar Paciente           |"); //
             Console.WriteLine("| 10       | Alterar Sala               |"); //
             Console.WriteLine("| 11       | Alterar Agendamento        |"); //
