@@ -15,18 +15,18 @@ namespace Models
         public int IdSala { set; get; }
         public Sala Sala { get; }
         public DateTime Data { set; get; }
-        public int IdProcedimento { set; get; }
-        public Procedimento Procedimento { set; get; }
+        //public int IdProcedimento { set; get; }
+        //public Procedimento Procedimento { set; get; }
         public bool Confirmado { set; get; }
 
         public Agendamento(
             int IdPaciente,
             int IdDentista,
             int IdSala,
-            DateTime Data,
-            int IdProcedimento
+            DateTime Data
+            //int IdProcedimento
             
-        ) : this(++ID, IdPaciente, IdDentista, IdSala, Data, IdProcedimento)
+        ) : this(++ID, IdPaciente, IdDentista, IdSala, Data)
         {}
 
         private Agendamento(
@@ -34,8 +34,8 @@ namespace Models
             int IdPaciente,
             int IdDentista,
             int IdSala,
-            DateTime Data,
-            int IdProcedimento
+            DateTime Data
+            //int IdProcedimento
             
         )
         {
@@ -47,8 +47,8 @@ namespace Models
             this.IdSala = IdSala;
             this.Sala = Sala.GetSalas().Find(Sala => Sala.Id == IdSala);
             this.Data = Data;
-            this.IdProcedimento = IdProcedimento;
-            this.Procedimento = Procedimento.GetProcedimentos().Find(Procedimento => Procedimento.Id == IdProcedimento);
+            //this.IdProcedimento = IdProcedimento;
+            //this.Procedimento = Procedimento.GetProcedimentos().Find(Procedimento => Procedimento.Id == IdProcedimento);
 
             Agendamentos.Add(this);
         }
@@ -60,7 +60,9 @@ namespace Models
                 + $"\nDentista: {this.Dentista.Nome}"
                 + $"\nSala: {this.Sala.Numero}"
                 + $"\nData: {this.Data}"
+                /*
                 + $"\nProcedimento: {this.Procedimento}"
+                */
                 + $"\nConfirmado: {(this.Confirmado ? "Sim" : "Não")}";
         }
 

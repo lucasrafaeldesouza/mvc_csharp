@@ -25,7 +25,6 @@ namespace Views
 
 
             ProcedimentoController.InserirProcedimento(
-                Id,
                 Descricao,
                 Preco
             );

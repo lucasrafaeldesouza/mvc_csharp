@@ -7,17 +7,9 @@ namespace Models
     {
         public static int ID = 0;
         private static List<Procedimento> Procedimentos = new List<Procedimento>();
-
         public int Id { set; get; }
         public string Descricao { set; get; }
         public double Preco { set; get; }
-
-        public override string ToString()
-        {
-            return base.ToString()
-                + $"\nDescricao: {this.Descricao}" 
-                + $"\nPreco: R$ {this.Preco}";
-        }
         public Procedimento(
             string Descricao,
             double Preco
@@ -38,7 +30,26 @@ namespace Models
             Procedimentos.Add(this);
         }
 
+        public override string ToString()
+        {
+           return $"ID: {this.Id}" 
+                + $"\nDescrição: {this.Descricao}"
+                + $"\nPreço: R$ {this.Preco}";
+        }
 
+          public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+            if (!Procedimento.ReferenceEquals(obj, this))
+            {
+                return false;
+            }
+            Procedimento it = (Procedimento) obj;
+            return it.Id == this.Id;
+        }
         public static List<Procedimento> GetProcedimentos()
         {
             return Procedimentos;
@@ -49,9 +60,5 @@ namespace Models
             Procedimentos.Remove(procedimento);
         }
 
-        internal static List<Procedimento> GetProcedimento(int idProcedimento)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

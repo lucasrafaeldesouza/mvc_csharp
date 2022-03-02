@@ -12,7 +12,7 @@ namespace Views
             int IdDentista;
             int IdSala;
             DateTime Data = DateTime.Now;
-            int IdProcedimento;
+            string Procedimento;
             Console.WriteLine("Digite o ID do Paciente do Agendamento: ");
             try
             {
@@ -53,7 +53,7 @@ namespace Views
             Console.WriteLine("Digite os Procedimentos do Agendamento: ");
             try
             {
-                IdProcedimento = int.Parse(Console.ReadLine());
+                Procedimento = Console.ReadLine();
             }
             catch
             {
@@ -65,8 +65,8 @@ namespace Views
                 IdPaciente,
                 IdDentista,
                 IdSala,
-                Data,
-                IdProcedimento
+                Data
+                //IdProcedimento
             );
 
         }

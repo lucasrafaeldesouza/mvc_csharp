@@ -9,7 +9,6 @@ namespace Controllers
     public class ProcedimentoController 
     {
         public static Procedimento InserirProcedimento(
-            int Id,
             string Descricao,
             double Preco
         )
@@ -18,7 +17,6 @@ namespace Controllers
             {
                 throw new Exception("Descricao inválida");
             }
-            Regex rx = new Regex("(^\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}$)|(^\\d{2}\\.\\d{3}\\.\\d{3}\\/\\d{4}\\-\\d{2}$)");
 
             return new Procedimento(Descricao, Preco);
         }
@@ -31,9 +29,9 @@ namespace Controllers
         {
             Procedimento procedimento = GetProcedimento(Id);
 
-            if (!String.IsNullOrEmpty(Descricao))
+            if (String.IsNullOrEmpty(Descricao))
             {
-                procedimento.Descricao = Descricao;
+                throw new Exception("Descricao inválida");
             }
 
             return procedimento;
@@ -63,7 +61,7 @@ namespace Controllers
 
             if (procedimento == null)
             {
-                throw new Exception("Dentista não encontrado");
+                throw new Exception("Procedimento não encontrado");
             }
 
             return procedimento;

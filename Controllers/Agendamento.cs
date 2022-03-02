@@ -11,8 +11,8 @@ namespace Controllers
             int IdPaciente,
             int IdDentista,
             int IdSala,
-            DateTime Data,
-            int IdProcedimento
+            DateTime Data
+            //int IdProcedimento
         )
         {
             PacienteController.GetPaciente(IdPaciente);
@@ -34,7 +34,7 @@ namespace Controllers
                 throw new Exception("Já existe um agendamento para este horário");
             }
 
-            return new Agendamento(IdPaciente, IdDentista, IdSala, Data, IdProcedimento);
+            return new Agendamento(IdPaciente, IdDentista, IdSala, Data);
         }
 
         private static bool GetConflito(
@@ -80,7 +80,7 @@ namespace Controllers
 
             agendamento.IdSala = IdSala;
             agendamento.Data = Data;
-            agendamento.IdProcedimento = IdProcedimento;
+            //agendamento.IdProcedimento = IdProcedimento;
 
             return agendamento;
         }
