@@ -121,34 +121,34 @@ namespace ConsultorioOdontologico
             Console.WriteLine("+---------------------------------------+");
             Console.WriteLine("| Operação | Descrição                  |");
             Console.WriteLine("|----------|----------------------------|");
-            Console.WriteLine("| 0        | Sair                       |"); // FEITO
-            Console.WriteLine("| 1        | Incluir Dentista           |"); // FEITO
-            Console.WriteLine("| 2        | Incluir Paciente           |"); // FEITO
-            Console.WriteLine("| 3        | Incluir Sala               |"); // FEITO
-            Console.WriteLine("| 4        | Incluir Agendamento        |"); // FEITO
-            Console.WriteLine("| 5        | Incluir Atendimento        |"); // FEITO
-            Console.WriteLine("| 6        | Incluir Especialidade      |"); // FEITO
-            Console.WriteLine("| 7        | Incluir Procedimento       |"); // 
-            Console.WriteLine("| 8        | Alterar Dentista           |"); // 
-            Console.WriteLine("| 9        | Alterar Paciente           |"); //
-            Console.WriteLine("| 10       | Alterar Sala               |"); //
-            Console.WriteLine("| 11       | Alterar Agendamento        |"); //
-            Console.WriteLine("| 12       | Alterar Especialidade      |"); //
-            Console.WriteLine("| 13       | Alterar Procedimento       |"); //
-            Console.WriteLine("| 14       | Excluir Dentista           |"); //
-            Console.WriteLine("| 15       | Excluir Paciente           |"); //
-            Console.WriteLine("| 16       | Excluir Sala               |"); //
-            Console.WriteLine("| 17       | Excluir Agendamento        |"); //
-            Console.WriteLine("| 18       | Excluir Atendimento        |"); //
-            Console.WriteLine("| 19       | Excluir Especialidade      |"); //
-            Console.WriteLine("| 20       | Excluir Procedimento       |"); //
-            Console.WriteLine("| 21       | Visualizar Dentistas       |"); // FEITO
-            Console.WriteLine("| 22       | Visualizar Pacientes       |"); // FEITO
-            Console.WriteLine("| 23       | Visualizar Salas           |"); // FEITO
-            Console.WriteLine("| 24       | Visualizar Agendamentos    |"); // FEITO
-            Console.WriteLine("| 25       | Visualizar Atendimentos    |"); // FEITO
-            Console.WriteLine("| 26       | Visualizar Especialidades  |"); // FEITO
-            Console.WriteLine("| 27       | Visualizar Procedimentos   |"); //
+            Console.WriteLine("| 0        | Sair                       |"); 
+            Console.WriteLine("| 1        | Incluir Dentista           |"); 
+            Console.WriteLine("| 2        | Incluir Paciente           |"); 
+            Console.WriteLine("| 3        | Incluir Sala               |"); 
+            Console.WriteLine("| 4        | Incluir Agendamento        |"); 
+            Console.WriteLine("| 5        | Incluir Atendimento        |"); 
+            Console.WriteLine("| 6        | Incluir Especialidade      |"); 
+            Console.WriteLine("| 7        | Incluir Procedimento       |");  
+            Console.WriteLine("| 8        | Alterar Dentista           |");  
+            Console.WriteLine("| 9        | Alterar Paciente           |"); 
+            Console.WriteLine("| 10       | Alterar Sala               |"); 
+            Console.WriteLine("| 11       | Alterar Agendamento        |"); 
+            Console.WriteLine("| 12       | Alterar Especialidade      |"); 
+            Console.WriteLine("| 13       | Alterar Procedimento       |"); 
+            Console.WriteLine("| 14       | Excluir Dentista           |"); 
+            Console.WriteLine("| 15       | Excluir Paciente           |"); 
+            Console.WriteLine("| 16       | Excluir Sala               |"); 
+            Console.WriteLine("| 17       | Excluir Agendamento        |"); 
+            Console.WriteLine("| 18       | Excluir Atendimento        |"); 
+            Console.WriteLine("| 19       | Excluir Especialidade      |"); 
+            Console.WriteLine("| 20       | Excluir Procedimento       |"); 
+            Console.WriteLine("| 21       | Visualizar Dentistas       |"); 
+            Console.WriteLine("| 22       | Visualizar Pacientes       |"); 
+            Console.WriteLine("| 23       | Visualizar Salas           |"); 
+            Console.WriteLine("| 24       | Visualizar Agendamentos    |"); 
+            Console.WriteLine("| 25       | Visualizar Atendimentos    |"); 
+            Console.WriteLine("| 26       | Visualizar Especialidades  |"); 
+            Console.WriteLine("| 27       | Visualizar Procedimentos   |"); 
             Console.WriteLine("+---------------------------------------+");
 
             int opt = 0;
