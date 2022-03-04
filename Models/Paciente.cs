@@ -22,6 +22,8 @@ namespace Models
                 + $"\nData de Nascimento: {this.DataNascimento}";
         }
 
+        public Paciente() { }
+        
         public Paciente(
             string Nome,
             string Cpf,
@@ -29,24 +31,7 @@ namespace Models
             string Email,
             string Senha,
             DateTime DataNascimento
-        ) : this(++ID, Nome, Cpf, Fone, Email, Senha, DataNascimento)
-        {
-            this.DataNascimento = DataNascimento;
-            Context db = new Context();
-            db.Pacientes.Add(this);
-            db.SaveChanges();
-        }
-
-        /*
-        private Paciente(
-            int Id,
-            string Nome,
-            string Cpf,
-            string Fone,
-            string Email,
-            string Senha,
-            DateTime DataNascimento
-        ) //: base(Id, Nome, Cpf, Fone, Email, Senha)
+        ) : base(Nome, Cpf, Fone, Email, Senha)
         {
             this.DataNascimento = DataNascimento;
 
@@ -56,7 +41,7 @@ namespace Models
 
             //Pacientes.Add(this);
         }
-        */
+        
 
         public static List<Paciente> GetPacientes()
         {

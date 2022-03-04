@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.ComponentModel.DataAnnotations;
 using Repository;
+using System;
 
 namespace Models
 {
@@ -10,8 +11,13 @@ namespace Models
         //public static int ID = 0;
         //private static List<Procedimento> Procedimentos = new List<Procedimento>();
         public int Id { set; get; }
+        [Required]
         public string Descricao { set; get; }
+        [Required]
         public double Preco { set; get; }
+
+        public Procedimento() { }
+        
         public Procedimento(
             string Descricao,
             double Preco

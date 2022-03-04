@@ -1,22 +1,32 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.ComponentModel.DataAnnotations;
+using Repository;
 
 namespace Models
 {
     public class Dentista : Pessoa
     {
-        public static int ID = 0;
-        private static List<Dentista> Dentistas = new List<Dentista>();
+        [Required]
         public string Registro { set; get; }
+        [Required]
         public double Salario { set; get; }
+        [Required]
         public string Especialidade { set; get; }
+        [Required]
+        public string EspecialidadeId { set; get; }
 
         public override string ToString()
         {
             return base.ToString()
-                + $"\nRegistro (CRO): {this.Registro}" 
-                + $"\nSalario: R$ {this.Salario}"
-                + $"\nEspecialiade: {this.Especialidade}";
+                + $"\n Registro: {this.Registro}"
+                + $"\n Salario: {this.Salario}"
+                + $"\n Especialidade: {this.Especialidade}";
         }
+
+        public Dentista() { }
+        
         public Dentista(
             string Nome,
             string Cpf,
@@ -26,38 +36,30 @@ namespace Models
             string Registro,
             double Salario,
             string Especialidade
-        ) : this(++ID, Nome, Cpf, Fone, Email, Senha, Registro, Salario, Especialidade)
-        {
-        }
-
-        private Dentista(
-            int Id,
-            string Nome,
-            string Cpf,
-            string Fone,
-            string Email,
-            string Senha,
-            string Registro,
-            double Salario,
-            string Especialidade
-        ) : base(Id, Nome, Cpf, Fone, Email, Senha)
+        ) : base(Nome, Cpf, Fone, Email, Senha)
         {
             this.Registro = Registro;
             this.Salario = Salario;
             this.Especialidade = Especialidade;
 
-            Dentistas.Add(this);
+            Context db = new Context();
+            db.Dentistas.Add(this);
+            db.SaveChanges();
+
+            //Dentista.Add(this);
         }
 
 
         public static List<Dentista> GetDentistas()
         {
-            return Dentistas;
+            Context db = new Context();
+            return (from Dentista in db.Dentistas select Dentista).ToList();
         }
 
         public static void RemoverDentista(Dentista dentista)
         {
-            Dentistas.Remove(dentista);
+            Context db = new Context();
+            db.Dentistas.Remove(dentista);
         }
 
     }

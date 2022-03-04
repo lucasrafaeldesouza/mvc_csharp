@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.ComponentModel.DataAnnotations;
 using Repository;
+using System;
+
 namespace Models
 {
     public class Sala
@@ -11,9 +13,12 @@ namespace Models
         public string Numero { set; get; }
         [Required]
         public string Equipamentos { set; get; }
+
+        public Sala() { }
+
         public Sala(
-        string Numero,
-        string Equipamentos
+            string Numero,
+            string Equipamentos
         )
         {
             this.Id = Id;
