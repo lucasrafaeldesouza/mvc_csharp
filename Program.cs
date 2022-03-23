@@ -122,7 +122,7 @@ namespace ConsultorioOdontologico
             Console.WriteLine("| Operação | Descrição                  |");
             Console.WriteLine("|----------|----------------------------|");
             Console.WriteLine("| 0        | Sair                       |"); 
-            Console.WriteLine("| 1        | Incluir Dentista           |"); 
+            Console.WriteLine("| 1        | Incluir Dentista           |"); //Ok
             Console.WriteLine("| 2        | Incluir Paciente           |"); 
             Console.WriteLine("| 3        | Incluir Sala               |"); 
             Console.WriteLine("| 4        | Incluir Agendamento        |"); 
