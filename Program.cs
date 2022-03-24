@@ -2,6 +2,7 @@ using System;
 using Views;
 using Controllers;
 using Models;
+using System.Windows.Forms;
 
 namespace ConsultorioOdontologico
 {
@@ -44,10 +45,16 @@ namespace ConsultorioOdontologico
 
         public static void Main(string[] args)
         {
+
+            Application.EnableVisualStyles();
+            Application.Run(new Login());
+
             //DentistaController.InserirDentista("José do Carmo", "111.111.111-11", "47 99999-9999", "jose.carmo@dentista.com", "123456", "12345/SC", 15000, "Ortodontia");
             //PacienteController.InserirPaciente("Amélia da Silva", "111.111.111-11", "47 88888-8888", "amelia.silva@paciente.com", "123456", Convert.ToDateTime("1990-01-01"));
             //SalaController.IncluirSala("B135", "RaioX");
             //MenuPrincipal();
+            
+            /*
 
             do
             {
@@ -72,7 +79,10 @@ namespace ConsultorioOdontologico
                     Console.WriteLine(err);
                 }
             } while (!Auth.isLogeed);
+            */
         }
+ 
+
 
         public static void MenuPaciente()
         {
@@ -122,7 +132,7 @@ namespace ConsultorioOdontologico
             Console.WriteLine("| Operação | Descrição                  |");
             Console.WriteLine("|----------|----------------------------|");
             Console.WriteLine("| 0        | Sair                       |"); 
-            Console.WriteLine("| 1        | Incluir Dentista           |"); //Ok
+            Console.WriteLine("| 1        | Incluir Dentista           |"); 
             Console.WriteLine("| 2        | Incluir Paciente           |"); 
             Console.WriteLine("| 3        | Incluir Sala               |"); 
             Console.WriteLine("| 4        | Incluir Agendamento        |"); 
